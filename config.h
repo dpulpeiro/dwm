@@ -15,8 +15,8 @@ static int swallowfloating    = 0;        /* 1 means swallow floating windows by
 static int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=18","JoyPixels:pixelsize=18:antialias=true:autohint=true" };
-static char dmenufont[]             = "JoyPixels:pixelsize=18:antialias=true:autohint=true";
+static const char *fonts[]          = { "monospace:size=20","JoyPixels:pixelsize=20:antialias=true:autohint=true" };
+static char dmenufont[]             = "JoyPixels:pixelsize=20:antialias=true:autohint=true";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#551a8b";
 static char normfgcolor[]           = "#bbbbbb";
@@ -205,6 +205,7 @@ static Key keys[] = {
         { 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer --allow-boost -d 3; kill -44 $(pidof dwmblocks)") },
         { 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("xbacklight -inc 15") },
         { 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("xbacklight -dec 15") },
+        { 0,				XK_F1,	spawn,		SHCMD("keyboard_layout_switch") },
 
 
 };
